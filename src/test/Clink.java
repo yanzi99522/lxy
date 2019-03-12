@@ -122,6 +122,12 @@ class CLType{
 }
 
 public class Clink {
+    //main（)主方法首先初始化链表
+    //然后循环添加数据结点，当输入全部是000的时候退出结点添加过程
+    //接下来显示所有的结点数据
+    //演示插入结点
+    //演示删除结点
+    //演示查找结点
     public static void main(String[] args) {
         CLType node,head=null;
         CLType CL=new CLType();

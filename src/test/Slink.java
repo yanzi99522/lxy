@@ -91,6 +91,11 @@ class SLType{ //定义顺序表结构
 }
 
 public class Slink {
+    //main（）方法首先初始化顺序表
+    //然后循环添加数据结点
+    //当输入全部为0的时候退出结点添加的过程
+    //显示所有的结点数据
+    //按照序号和关键字进行结点的查找
     public static void main(String[] args) {
         int i;
         SLType SL=new SLType();
