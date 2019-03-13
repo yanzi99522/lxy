@@ -85,7 +85,7 @@ public class Tree {
         }
     }
 
-    CBTType TreeFindNode(CBTType treeNode,String){//查找结点
+    CBTType TreeFindNode(CBTType treeNode,String data){//查找结点
         CBTType ptr;
         if (treeNode==null){
             return null;
@@ -148,9 +148,39 @@ public class Tree {
                 return depleft+1;
             }
             else {
-                return depright;
+                return depright+1;
             }
         }
+    }
 
+    void ClearTree(CBTType treeNode){//清空二叉树
+        if (treeNode!=null){
+            ClearTree(treeNode.left);//清空左子树
+            ClearTree(treeNode.right);//清空右子树
+            treeNode=null;//释放当前结点所占内存
+        }
+    }
+
+    void TreeNodeData(CBTType p){//显示结点数据
+        System.out.println(p.data);//输出结点数据
+    }
+
+    void LevelTree(CBTType treeNode){//按层遍历
+        CBTType p;
+        CBTType[]q=new CBTType[MAXLEN];//定义一个顺序栈
+        int head=0,tail=0;
+
+        if (treeNode!=null){
+            tail=(tail+1)%MAXLEN;
+            q[tail]=treeNode;
+        }
+        while (head!=tail){
+
+
+
+
+
+
+        }
     }
 }
