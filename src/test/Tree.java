@@ -2,7 +2,7 @@ package test;
 
 import java.util.Scanner;
 
-//树结构
+//树结构,树Tree
 class CBTType{//定义二叉树结点类型
     String data;//元素数据
     CBTType left;//左子树结点引用
