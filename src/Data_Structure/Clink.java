@@ -2,7 +2,7 @@ package Data_Structure;
 
 import java.util.Scanner;
 
-//链表
+//链表的数据结构
 class DATA2{
     String key;//结点的关键字
     String name;
