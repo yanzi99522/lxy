@@ -61,7 +61,7 @@ public class Tree {
                     else {
                         switch (menuse){
                             case 1:
-                                if (parent.left!=null){
+                                if (parent.left!=null){//添加到左结点
                                     System.out.println("左子树结点不为空");
                                 }
                                 else {
@@ -81,7 +81,7 @@ public class Tree {
                         }
                     }
                 }
-            }while (true);
+            }while(menuse!=1&&menuse!=2);
         }
     }
 
@@ -174,13 +174,113 @@ public class Tree {
             tail=(tail+1)%MAXLEN;
             q[tail]=treeNode;
         }
-        while (head!=tail){
+        while (head!=tail){//队列不为空，进行循环
+            head=(head+1)%MAXLEN;
+            p=q[head];
+            TreeNodeData(p);
+            if(p.left!=null){
+                tail=(tail+1)%MAXLEN;
+                q[tail]=p.left;
+            }
 
-
-
-
-
-
+            if(p.right!=null){
+                tail=(tail+1)%MAXLEN;
+                q[tail]=p.right;
+            }
         }
+    }
+
+    void DLRTree(CBTType treeNode){//先序遍历
+        if (treeNode!=null){
+            TreeNodeData(treeNode);//显示结点的数据
+            DLRTree(treeNode.left);
+            DLRTree(treeNode.right);
+        }
+    }
+
+    void LDRTree(CBTType treeNode){//中序遍历
+        if(treeNode!=null){
+            LDRTree(treeNode.left);//中序遍历左子树
+            TreeNodeData(treeNode);//显示结点数据
+            LDRTree(treeNode.right);//中序遍历右子树
+        }
+    }
+
+    void LRDTree(CBTType treeNode){//后序遍历
+        if(treeNode!=null){
+            LRDTree(treeNode.left);//后序遍历左子树
+            LDRTree(treeNode.right);//后序遍历右子树
+            TreeNodeData(treeNode);//显示结点数据
+        }
+    }
+
+    public static void main(String[] args) {
+        CBTType root=null;//root为指向二叉树根结点的引用
+        int menuse;
+        Tree t =new Tree();
+        //设置根元素
+        root=t.InitTree();
+        //添加结点
+        do {
+            System.out.println("请选择菜单添加二叉树的结点：");
+            System.out.println("0.退出");
+            System.out.println("1.添加二叉树的结点");
+            menuse=input.nextInt();
+            switch (menuse){
+                case 1:
+                    t.AddTreeNode(root);//添加结点
+                    break;
+                case 0:
+                    break;
+                    default:
+                        ;
+            }
+        }while (menuse!=0);
+
+        //遍历
+        do {
+            System.out.println("请选择菜单遍历二叉树，输入0表示退出：");
+            System.out.println("1.先序遍历DLR:");//显示菜单
+            System.out.println("2.中序遍历LDR:");
+            System.out.println("3.后序遍历LRD");
+            System.out.println("4.按层遍历");
+
+            menuse = input.nextInt();
+            switch (menuse) {
+                case 0:
+                    break;
+
+                case 1:
+                    //先序遍历
+                    System.out.println("先序遍历的结果：");
+                    t.DLRTree(root);
+                    System.out.println();
+                    break;
+                case 2:
+                    //中序遍历
+                    System.out.println("中序遍历的结果：");
+                    t.LDRTree(root);
+                    System.out.println();
+                    break;
+                case 3:
+                    //后序遍历
+                    System.out.println("后序遍历的结果：");
+                    t.LRDTree(root);
+                    System.out.println();
+                    break;
+                case 4:
+                    //按层遍历
+                    System.out.println("按层遍历的结果：");
+                    t.LevelTree(root);
+                    System.out.println();
+                    break;
+                default:
+                    ;
+            }
+        } while (menuse != 0);
+        //深度
+        System.out.println("二叉树深度为" + t.TreeDepth(root));
+        t.ClearTree(root);
+        root=null;//清空二叉树
     }
 }
