@@ -99,11 +99,12 @@ public class Graph {
         }
         System.out.println();
     }
-    //在主方法中，首先由用户输入图的种类，0表示无向图，1表示有向图
+    //在main()主方法中，首先由用户输入图的种类，0表示无向图，1表示有向图
     //然后，由用户输入顶点数和边数
     //接着清空图
     //并按照用户输入的数据生成邻接表结构的图
     //最后，输出邻接矩阵并执行深度优先遍历法来遍历整个图
+
     public static void main(String[] args) {
         GraphMatrix GM=new GraphMatrix();//定义保存邻接表结构的图
 
