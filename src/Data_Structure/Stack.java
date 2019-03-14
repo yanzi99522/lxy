@@ -1,8 +1,7 @@
 package Data_Structure;
-//栈结构
 
 import java.util.Scanner;
-
+//栈的数据结构
 class DATA3{
 //    String key;
     String name;
