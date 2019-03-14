@@ -1,7 +1,7 @@
 package Data_Structure;
 
 import java.util.Scanner;
-
+//顺序表的数据结构
 class DATA{ //结点的关键字
     String key;
     String name;
