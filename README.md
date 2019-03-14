@@ -1,6 +1,6 @@
 # lxy
-#数据结构是算法的基础
-#Data_Structure包中是基本的数据结构
+#数据结构是算法的基础  
+#Data_Structure包中是基本的数据结构  
 #顺序表 Slink
 #链表   Clink
 #栈     Stack
