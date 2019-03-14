@@ -1,4 +1,4 @@
-package test;
+package Data_Structure;
 //队列结构
 
 import java.util.Scanner;
