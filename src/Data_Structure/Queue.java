@@ -1,5 +1,6 @@
 package Data_Structure;
-//队列结构
+
+//队列的数据结构
 
 import java.util.Scanner;
 
