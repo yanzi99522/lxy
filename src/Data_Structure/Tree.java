@@ -2,7 +2,8 @@ package Data_Structure;
 
 import java.util.Scanner;
 
-//树结构,树Tree
+//树Tree的数据结构
+
 class CBTType{//定义二叉树结点类型
     String data;//元素数据
     CBTType left;//左子树结点引用
