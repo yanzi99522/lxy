@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-
+//单向传输的Socket
 public class UploadServer {
     public static void main(String[] args) {
         System.out.println("服务器端运行。。。");

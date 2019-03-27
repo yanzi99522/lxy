@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.ConnectException;
 import java.net.Socket;
-
+//单向传输的Socket
 public class UploadClient {
     public static void main(String[] args) {
         System.out.println("客户端运行。。。");
