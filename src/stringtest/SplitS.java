@@ -3,6 +3,8 @@ package stringtest;
 public class SplitS {
     public static void main(String[] args) {
         String str="www-baidu-com";
+        System.out.println(str);
+        System.out.println(str.replace('b','J'));
         String[] temp;
         String D="-";
         temp=str.split(D);
