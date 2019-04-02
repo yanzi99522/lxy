@@ -105,6 +105,16 @@ public class SeqList<T> extends Object{
     public void clear(){
         this.n=0;
     }
+    //查找
+    public int search(T key){
+        for (int i=0;i<this.n;i++){
+            if (key.equals(this.element[i])){
+                return i;
+            }
+
+        }
+        return -1;
+    }
     //返回顺序表所有元素的描述字符串，形式为“（，）“，覆盖Object类的toString()方法
     public String toString(){
         String str=this.getClass().getName()+"(";//返回类名
@@ -118,9 +128,9 @@ public class SeqList<T> extends Object{
         }
         return str+")";//空表返回
     }
-    //返回所有元素的描述字符串（次序从后向前）
-    public String toPreviousString(){
-        return toString();
-    }
+//    //返回所有元素的描述字符串（次序从后向前）
+//    public String toPreviousString(){
+//        return toString();
+//    }
 
 }
