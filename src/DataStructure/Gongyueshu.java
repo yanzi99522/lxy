@@ -22,3 +22,4 @@ public class Gongyueshu {
 
         }
     }
+    //求三个整数a,b,c最大公约数：gcd(gcd(a,b),c)
