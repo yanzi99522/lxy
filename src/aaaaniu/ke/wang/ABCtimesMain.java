@@ -3,7 +3,7 @@ package aaaaniu.ke.wang;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class skewMain {
+public class ABCtimesMain {
     public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
         char[] chars=new char[26];
