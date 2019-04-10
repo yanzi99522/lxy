@@ -1,7 +1,7 @@
 package aaaaniu.ke.wang.newmain;
 
 import java.util.Scanner;
-//最大子序列和
+//最大上升子序列和
 public class Main {
     public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
