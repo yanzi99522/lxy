@@ -17,7 +17,11 @@ public class jiechengMain {
 
     public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
-        long n=in.nextInt();
-        System.out.println(fun(n));
+        while (in.hasNext()) {
+            long n=in.nextInt();
+            System.out.println(fun(n));
+
+        }
+
     }
 }
