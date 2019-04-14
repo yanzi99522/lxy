@@ -38,7 +38,7 @@ class CLType{
 
     CLType CLAddFirst(CLType head,DATA2 nodeData){
         CLType node;
-        if ((node=new CLType())!=null){
+        if ((node=new CLType())==null){
             System.out.println("申请内存失败！");
             return null;
         }
