@@ -115,7 +115,7 @@ class CLType{
         System.out.println("当前链表共有"+CLLength(head)+"个结点，链表所有数据如下：");
         while (htemp!=null){
             nodeData=htemp.nodeData;
-            System.out.println("结点"+nodeData.key+nodeData.name+nodeData.age);
+            System.out.printf("结点(%s,%s,%d)\n",nodeData.key,nodeData.name,nodeData.age);
             htemp=htemp.nextNode;
         }
     }
