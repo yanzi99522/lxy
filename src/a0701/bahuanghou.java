@@ -41,7 +41,7 @@ public class bahuanghou {
         System.out.printf("  ");
         for(i=1;i<=8;i++)
         {
-            System.out.printf("��");
+            System.out.printf("--");
         }
         System.out.printf("\n");
     }
@@ -52,31 +52,28 @@ public class bahuanghou {
         int ct;							//用于判断是否冲突
         if (n == 8)						//若8个皇后已经放置完成
         {
-            Output(); 					//������Ľ��
+            Output(); 					//输出求解的结果
             return;
         }
         for (i = 1; i <= 8; i++)				//试探
         {
-            WeiZhi[n] = i;					//在该列的第i行上放置
+            WeiZhi[n] = i;                    //在该列的第i行上放置
             //判断第n个皇后是否与前面皇后形成攻击
-            ct=1;
-            for (j = 0; j < n; j++)
-            {
-                if (WeiZhi[j] == WeiZhi[n])		// 形成攻击
+            ct = 1;
+            for (j = 0; j < n; j++) {
+                if (WeiZhi[j] == WeiZhi[n])        // 形成攻击
                 {
-                    ct=0;
-                }
-                else if (Math.abs(WeiZhi[j] - WeiZhi[n]) == (n - j))// 形成攻击
+                    ct = 0;
+                } else if (Math.abs(WeiZhi[j] - WeiZhi[n]) == (n - j))// 形成攻击
                 {
-                    ct=0;
-                }
-                else
-                {
+                    ct = 0;
+                } else {
                 }
             }
 
-            if (ct==1)					//没有冲突，就开始下一列的试探
-                EightQueen(n + 1); 		//递归调用
+            if (ct == 1) {                //没有冲突，就开始下一列的试探
+                EightQueen(n + 1);        //递归调用
+            }
         }
     }
     public static void main(String[] args)
