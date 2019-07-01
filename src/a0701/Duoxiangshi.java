@@ -17,11 +17,13 @@ public class Duoxiangshi {
 
     public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
-        int[]a=new int[4];
-       a[0]=1;a[1]=1;a[2]=1;a[3]=1;
-       int x=2;
-       int result=hanshu(a,4,x);
-        System.out.println(result);
+        int[]a={1,2,3,4};
+       int []x={1,2,3,4};
+       for (int i=0;i<4;i++){
+           int result=hanshu(a,4,x[i]);
+           System.out.println(result);
+       }
+
 
     }
 
