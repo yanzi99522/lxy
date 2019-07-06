@@ -13,7 +13,7 @@ import java.util.TreeSet;
 public class Main {//一个字符串中可能包含a~z中的多个字符，
     // 如果有重复，求出现次数最多的那个字母及次数，如果有多个重复则都求出
     public static void main(String[] args) {
-        String input="aabcvdgjueyagkdhuiagalkh";
+        String input="azayaxxxdcb";
         new Main().doString(input);
     }
 
