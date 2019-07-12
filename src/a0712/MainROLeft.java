@@ -4,6 +4,26 @@ package a0712;
  * @author lxy
  */
 public class MainROLeft {
+    static String LeftRotateString(String str,int n) {
+        int len=str.length();
+        StringBuffer stringBuffer=new StringBuffer();
+        if(len>n){
+            for(int i=n;i<len;i++){
+                stringBuffer.append(str.charAt(i));
+            }
+            for(int i=len-1;i>len-n-1;i--){
+                stringBuffer.append(str.charAt(len-1-i));
+            }
+            String s=stringBuffer.toString();
+            return s;
+        }else if(len==n){
+            return str;
+        }
+        else{
+            String st="";
+            return st;
+        }
+    }
     public static void main(String[] args) {
 
         String str = "abcXYZdef";
@@ -22,5 +42,8 @@ public class MainROLeft {
         }else {
             System.out.println("");
         }
+
+         String s=LeftRotateString("helooles",4);
+        System.out.println(s);
     }
 }
