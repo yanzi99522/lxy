@@ -159,7 +159,7 @@ public class Clink {
         System.out.println("演示删除结点，请输入要删除的关键字");
         key=input.next();
         CL.CLDeleteNode(head,key);
-        CL.CLAllnode(head);
+        CL.CLAllnode(head);//显示所有结点
 
         System.out.println("演示在链表中查找，输入查找关键字：");
 

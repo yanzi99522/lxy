@@ -22,7 +22,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution test=new Solution();
-       int a=NumberOf1Between1AndN_Solution(13);
+       int a=NumberOf1Between1AndN_Solution(1300);
         System.out.println(a);
 
     }

@@ -18,7 +18,7 @@ public class Maint {
                 continue;
             }
             last=last-user;
-            if (last==0){
+            if (last<=0){
                 System.out.println("用户取了最后一个火柴，所以计算机赢了！");
                 break;
             }else {

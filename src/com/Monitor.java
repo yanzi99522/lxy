@@ -15,7 +15,19 @@ public class Monitor {
     private String totalTime;//记录了控制器-交换机-控制器的总时延
     private String numberOfSendPackets;//表示控制器发送Packet-Out消息的个数
     private String numberOfReceivedPackets;//表示控制器收到转发过来Packet-In消息的个数
+    public void getAvailableBandwidth() {//获得可用带宽
+        //1.首先通过getSwitchStatistics得到交换机端口的统计信息values，并将这些信息放在List<OFStatistics>中
+        //2.然后在该列表中查找类型为OFPortStatisticsReply的消息。通过该消息对象获得接收字节数（getReceivedBytes)
+        //  和传输字节数（getTransmitBytes),将这两个值相加得到bytesBefore,即当前的字节数，同时记录当前的时间beforeTime
+        //3.测量线程等待DEFAULT_PERIOD_FOR_BANDWIDTH毫秒（默认1000毫秒）
+        //4.继续通过getSwitchStatistics得到交换机端口的统计信息values，得到bytesEnd和endTime
+        //5.计算已用传输带宽为（bytesEnd-bytesBefore)/(endTime-beforeTime),
+        //  可用带宽为链路总带宽减去已用传输带宽
+        return;
+    }
+    
     public String getDelay() {//获得时延
+
         return getDelay();
     }
     public void init() {//初始化
@@ -30,16 +42,9 @@ public class Monitor {
     public void getPacketLossRate() {//获得丢包率
         return;
     }
-    public void getAvailableBandwidth() {//获得可用带宽
-        //1.首先通过getSwitchStatistics得到交换机端口的统计信息values，并将这些信息放在List<OFStatistics>中
-        //2.然后在该列表中查找类型为OFPortStatisticsReply的消息。通过该消息对象获得接收字节数（getReceivedBytes)
-        //  和传输字节数（getTransmitBytes),将这两个值相加得到bytesBefore,即当前的字节数，同时记录当前的时间beforeTime
-        //3.测量线程等待DEFAULT_PERIOD_FOR_BANDWIDTH毫秒（默认1000毫秒）
-        //4.继续通过getSwitchStatistics得到交换机端口的统计信息values，得到bytesEnd和endTime
-        //5.计算已用传输带宽为（bytesEnd-bytesBefore)/(endTime-beforeTime),
-        //  可用带宽为链路总带宽减去已用传输带宽
-        return;
-    }
+
+
+
     public String getTotalTime() {//获得总时间
         return totalTime;
     }

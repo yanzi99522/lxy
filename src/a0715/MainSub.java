@@ -38,7 +38,7 @@ public class MainSub {//求最大重复子串abcabcabc的最大重复子串abc
                }
 
             }
-            System.out.println(s!=""?s:"false");
+            System.out.println(s!=""?s.length():"false");
        }
     }
 }

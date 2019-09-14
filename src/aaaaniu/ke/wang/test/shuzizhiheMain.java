@@ -12,7 +12,7 @@ public class shuzizhiheMain {
             temp=temp/10;
 
         }
-        System.out.println(sum1+" ");
+        System.out.print(sum1+" ");
         int b=a*a;
         while (b>0){
             sum2=sum2+b%10;
